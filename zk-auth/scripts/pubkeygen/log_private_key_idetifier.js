@@ -1,6 +1,6 @@
 const fs = require('fs');
-
-const data = JSON.parse(fs.readFileSync("../../build/pubkeygen/public.json", "utf8"));
+const fileName = process.argv[2];
+const data = JSON.parse(fs.readFileSync(`../../build/pubkeygen/outputs/public_${fileName}.json`, "utf8"));
 
 function toHexString(num) {
     return BigInt(num).toString(16);

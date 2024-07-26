@@ -15,6 +15,7 @@ if [ ! -d "$BUILD_DIR" ]; then
     echo "No build directory found. Creating build directory..."
     mkdir -p "$BUILD_DIR"
 fi
+mkdir "$BUILD_DIR"/outputs
 
 echo "****COMPILING CIRCUIT****"
 start=`date +%s`
